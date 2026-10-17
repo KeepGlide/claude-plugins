@@ -107,3 +107,5 @@ Para mudar um plugin, abra uma issue ou pull request no repositório desse plugi
 ## 📄 Licença
 
 O catálogo tem licença MIT; veja [LICENSE](LICENSE). Cada plugin declara a própria licença no seu repositório.
+
+Feito por [Sophia Phillipa](https://github.com/sophia-phillipa) na [KeepGlide](https://keepglide.com).

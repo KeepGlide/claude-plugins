@@ -107,3 +107,5 @@ To change a plugin, open an issue or pull request in that plugin's repository. T
 ## 📄 License
 
 The catalog is MIT-licensed; see [LICENSE](LICENSE). Each plugin states its own license in its repository.
+
+Made by [Sophia Phillipa](https://github.com/sophia-phillipa) at [KeepGlide](https://keepglide.com).
