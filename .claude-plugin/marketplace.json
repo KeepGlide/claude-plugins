@@ -16,6 +16,19 @@
         "url": "https://github.com/KeepGlide/askaway.git",
         "path": "plugins/askaway"
       }
+    },
+    {
+      "name": "master-jev-hook",
+      "description": "JEV decisions for Claude Code: the master-jev-hook MCP tools (request_decision, jev_classify, jev_verify, jev_score, jev_rank), the skill that formulates them, and hooks that check the gateway, remind the rule and gate risky Bash commands. Needs the local gateway from the plugin's README.",
+      "homepage": "https://github.com/KeepGlide/master-jev-hook",
+      "repository": "https://github.com/KeepGlide/master-jev-hook",
+      "license": "Apache-2.0",
+      "category": "workflow",
+      "tags": ["jev", "typesafe", "decision", "mcp", "hooks"],
+      "source": {
+        "source": "github",
+        "repo": "KeepGlide/master-jev-hook"
+      }
     }
   ]
 }
