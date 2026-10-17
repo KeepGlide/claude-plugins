@@ -1,0 +1,21 @@
+{
+  "name": "keepglide",
+  "description": "KeepGlide's Claude Code plugins: Askaway and the ones that follow.",
+  "owner": { "name": "KeepGlide", "url": "https://keepglide.com" },
+  "plugins": [
+    {
+      "name": "askaway",
+      "description": "A question inbox for Claude Code: agents file questions with a recommended default while you are away; you answer them in a real panel, one at a time, all at once per project.",
+      "homepage": "https://github.com/KeepGlide/askaway",
+      "repository": "https://github.com/KeepGlide/askaway",
+      "license": "MIT",
+      "category": "workflow",
+      "tags": ["questions", "inbox", "panel", "unattended"],
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/KeepGlide/askaway.git",
+        "path": "plugins/askaway"
+      }
+    }
+  ]
+}
