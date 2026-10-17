@@ -22,7 +22,9 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/KeepGlide/askaway.git",
-        "path": "plugins/askaway"
+        "path": "plugins/askaway",
+        "ref": "v0.4.0-beta.3",
+        "sha": "9cb91c24209df4977f5e3d816cd601889ba73390"
       }
     },
     {
@@ -41,7 +43,9 @@
       ],
       "source": {
         "source": "github",
-        "repo": "KeepGlide/master-jev-hook"
+        "repo": "KeepGlide/master-jev-hook",
+        "ref": "v1.3.0-beta.1",
+        "sha": "e6b9e7c3bb3922c855b972ac9e7484eb88150f2a"
       }
     }
   ]
