@@ -25,8 +25,7 @@
         "path": "plugins/askaway",
         "ref": "v0.4.0-beta.8",
         "sha": "6b30a7861d3f60415f4289c5b7395fede1d6e2d7"
-      },
-      "version": null
+      }
     },
     {
       "name": "master-jev-hook",
