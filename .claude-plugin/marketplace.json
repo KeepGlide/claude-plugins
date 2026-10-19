@@ -44,8 +44,8 @@
       "source": {
         "source": "github",
         "repo": "KeepGlide/master-jev-hook",
-        "ref": "v1.3.0-beta.1",
-        "sha": "e6b9e7c3bb3922c855b972ac9e7484eb88150f2a"
+        "ref": "v1.3.0-beta.2",
+        "sha": "d877dd2f121029b029e19c84d4d1ca72b755d280"
       }
     }
   ]
