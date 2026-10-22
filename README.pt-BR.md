@@ -16,7 +16,7 @@
 
 ## 📌 Status
 
-Beta. O catálogo ainda não tem número de versão nem tag. Os plugins que ele lista estão em versões beta: askaway `0.4.0-beta.40` e master-jev-hook `1.3.0-beta.2`. O projeto segue o [Versionamento Semântico](https://semver.org/). Enquanto uma versão for `0.y.z` ou uma pré-versão, ela pode mudar a qualquer momento.
+Beta. O catálogo ainda não tem número de versão nem tag. Os plugins que ele lista estão em versões beta: askaway `0.4.0-beta.41` e master-jev-hook `1.3.0-beta.2`. O projeto segue o [Versionamento Semântico](https://semver.org/). Enquanto uma versão for `0.y.z` ou uma pré-versão, ela pode mudar a qualquer momento.
 
 ## 💡 Por que existe
 
@@ -38,7 +38,7 @@ Um marketplace, `keepglide`, com dois plugins. Todos os valores abaixo são lido
 
 | Plugin | O que faz | Repositório | Versão fixada | Licença | Id de instalação |
 |---|---|---|---|---|---|
-| `askaway` | Uma caixa de perguntas para o Claude Code: os agentes registram perguntas com uma resposta recomendada enquanto você está ausente, e você responde num painel, uma por vez ou todas de uma vez por projeto. | [KeepGlide/askaway](https://github.com/KeepGlide/askaway) | `v0.4.0-beta.40` (`aeb3503`) | MIT | `askaway@keepglide` |
+| `askaway` | Uma caixa de perguntas para o Claude Code: os agentes registram perguntas com uma resposta recomendada enquanto você está ausente, e você responde num painel, uma por vez ou todas de uma vez por projeto. | [KeepGlide/askaway](https://github.com/KeepGlide/askaway) | `v0.4.0-beta.41` (`1b4b50f`) | MIT | `askaway@keepglide` |
 | `master-jev-hook` | Ferramentas de decisão JEV para o Claude Code: as ferramentas MCP do `master-jev-hook` (`request_decision`, `jev_classify`, `jev_verify`, `jev_score`, `jev_rank`), a skill que as formula, e hooks que checam o gateway, lembram a regra e controlam comandos Bash arriscados. Precisa do gateway local do README do plugin. | [KeepGlide/master-jev-hook](https://github.com/KeepGlide/master-jev-hook) | `v1.3.0-beta.2` (`d877dd2`) | Apache-2.0 | `master-jev-hook@keepglide` |
 
 ## ⚙️ Como funciona
@@ -130,7 +130,7 @@ Regras básicas:
 |---|---|---|---|
 | 1 | Verificar o Claude Code | `claude --version` | Imprime uma versão e `(Claude Code)`; código de saída 0. |
 | 2 | 🧑 Adicionar o marketplace | `claude plugin marketplace add KeepGlide/claude-plugins` | Imprime `Successfully added marketplace: keepglide`; `claude plugin marketplace list` mostra `keepglide`. |
-| 3 | 🧑 Instalar o plugin | `claude plugin install askaway@keepglide` | Imprime `Successfully installed plugin: askaway@keepglide (scope: user)`; `claude plugin list` mostra `askaway@keepglide` com `Version: 0.4.0-beta.40`. |
+| 3 | 🧑 Instalar o plugin | `claude plugin install askaway@keepglide` | Imprime `Successfully installed plugin: askaway@keepglide (scope: user)`; `claude plugin list` mostra `askaway@keepglide` com `Version: 0.4.0-beta.41`. |
 | 3b | 🧑 Instalar o plugin master-jev-hook (opcional) | `claude plugin install master-jev-hook@keepglide` | Imprime `Successfully installed plugin: master-jev-hook@keepglide (scope: user)`; `claude plugin list` mostra `master-jev-hook@keepglide` com `Version: 1.3.0-beta.2`. |
 | 4 | Devolver ao usuário | nenhum | Informe cada resultado e qualquer passo pulado. |
 
