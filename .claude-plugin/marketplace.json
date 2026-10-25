@@ -23,8 +23,8 @@
         "source": "git-subdir",
         "url": "https://github.com/KeepGlide/askaway.git",
         "path": "plugins/askaway",
-        "ref": "v0.4.0-beta.43",
-        "sha": "42ea4c3887b22cd40e960f96744b6455498fed86"
+        "ref": "v0.4.0-beta.44",
+        "sha": "03e9eada1e10333c3c39bb9466fdb3372630fbdd"
       }
     },
     {
