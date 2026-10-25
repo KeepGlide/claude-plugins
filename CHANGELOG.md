@@ -17,7 +17,7 @@ The catalog has no tagged release yet, so every change from the first commit to
 
 ### Changed
 
-- Plugin pins move with each new `askaway` beta, from `v0.4.0-beta.4` (`d3c8ca4`) to `v0.4.0-beta.42` (`e322aac`), through 32 `chore(catalog)` pin commits.
+- Plugin pins move with each new `askaway` beta, from `v0.4.0-beta.4` (`d3c8ca4`) to `v0.4.0-beta.43` (`3602646`), through 33 `chore(catalog)` pin commits.
 - The README pair follows the KeepGlide README standard: banner, badges, Status, What it delivers with a plugin table, How it works, Known issues, Uninstall, Development (`claude plugin validate`) and Maintainer.
 - Author credit: Sophia Phillipa (KeepGlide) is named as the catalog author (`7a0d6e4`).
 
