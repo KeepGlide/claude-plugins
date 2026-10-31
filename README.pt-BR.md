@@ -10,7 +10,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-1E2A47.svg)](LICENSE) ![Platform: Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-1E2A47.svg)
 
-[Instalação](#-instalação) · [Uso](#-uso) · [Atualização](#-atualização) · [Changelog](CHANGELOG.md) · [Relatar um bug](https://github.com/KeepGlide/claude-plugins/issues/new) · [Segurança](SECURITY.md)
+[🌐 Site](https://keepglide.com/pt-br/products) · [Instalação](#-instalação) · [Uso](#-uso) · [Atualização](#-atualização) · [Changelog](CHANGELOG.md) · [Relatar um bug](https://github.com/KeepGlide/claude-plugins/issues/new) · [Segurança](SECURITY.md)
 
 </div>
 
