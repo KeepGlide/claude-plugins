@@ -19,7 +19,7 @@ The catalog has no tagged release yet, so every change from the first commit to
 
 - The README pair links the product page on keepglide.com from the top navigation line.
 
-- Plugin pins move with each new `askaway` beta, from `v0.4.0-beta.4` (`d3c8ca4`) to `v1.0.2`, through 46 `chore(catalog)` pin commits (`v1.0.0` was the first stable askaway).
+- Plugin pins move with each new `askaway` beta, from `v0.4.0-beta.4` (`d3c8ca4`) to `v1.0.3`, through 47 `chore(catalog)` pin commits (`v1.0.0` was the first stable askaway).
 - The README pair follows the KeepGlide README standard: banner, badges, Status, What it delivers with a plugin table, How it works, Known issues, Uninstall, Development (`claude plugin validate`) and Maintainer.
 - Author credit: Sophia Phillipa (KeepGlide) is named as the catalog author (`7a0d6e4`).
 
