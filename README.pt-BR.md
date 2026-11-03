@@ -16,7 +16,7 @@
 
 ## 📌 Status
 
-Beta. O catálogo ainda não tem número de versão nem tag. Os plugins que ele lista: askaway `1.0.3`, estável, e master-jev-hook `1.3.0-beta.2`, beta. O projeto segue o [Versionamento Semântico](https://semver.org/). Enquanto uma versão for `0.y.z` ou uma pré-versão, ela pode mudar a qualquer momento.
+Beta. O catálogo ainda não tem número de versão nem tag. Os plugins que ele lista: askaway-user `1.0.3`, estável, e askaway-model `1.3.0-beta.2`, beta. O projeto segue o [Versionamento Semântico](https://semver.org/). Enquanto uma versão for `0.y.z` ou uma pré-versão, ela pode mudar a qualquer momento.
 
 ## 💡 Por que existe
 
@@ -38,8 +38,8 @@ Um marketplace, `keepglide`, com dois plugins. Todos os valores abaixo são lido
 
 | Plugin | O que faz | Repositório | Versão fixada | Licença | Id de instalação |
 |---|---|---|---|---|---|
-| `askaway` | Uma caixa de perguntas para o Claude Code: os agentes registram perguntas com uma resposta recomendada enquanto você está ausente, e você responde num painel, uma por vez ou todas de uma vez por projeto. | [KeepGlide/askaway](https://github.com/KeepGlide/askaway) | `v1.0.3` (`27e5f27`) | MIT | `askaway@keepglide` |
-| `master-jev-hook` | Ferramentas de decisão JEV para o Claude Code: as ferramentas MCP do `master-jev-hook` (`request_decision`, `jev_classify`, `jev_verify`, `jev_score`, `jev_rank`), a skill que as formula, e hooks que checam o gateway, lembram a regra e controlam comandos Bash arriscados. Precisa do gateway local do README do plugin. | [KeepGlide/master-jev-hook](https://github.com/KeepGlide/master-jev-hook) | `v1.3.0-beta.2` (`d877dd2`) | Apache-2.0 | `master-jev-hook@keepglide` |
+| `askaway-user` | AskAway User, uma caixa de perguntas para o Claude Code: os agentes registram perguntas com uma resposta recomendada enquanto você está ausente, e você responde num painel, uma por vez ou todas de uma vez por projeto. | [KeepGlide/askaway](https://github.com/KeepGlide/askaway) | `main` (`da5d746`) | MIT | `askaway-user@keepglide` |
+| `askaway-model` | AskAway Model, ferramentas de decisão JEV para o Claude Code: as ferramentas MCP do `askaway-model` (`request_decision`, `jev_classify`, `jev_verify`, `jev_score`, `jev_rank`), a skill que as formula, e hooks que checam o gateway, lembram a regra e controlam comandos Bash arriscados. Precisa do gateway local do README do plugin. | [KeepGlide/master-jev-hook](https://github.com/KeepGlide/master-jev-hook) | `main` (`b1318c3`) | Apache-2.0 | `askaway-model@keepglide` |
 
 ## ⚙️ Como funciona
 
@@ -67,19 +67,19 @@ sequenceDiagram
   U->>CC: claude plugin marketplace add KeepGlide/claude-plugins
   CC->>MP: lê .claude-plugin/marketplace.json
   MP-->>CC: catálogo keepglide com 2 plugins
-  U->>CC: claude plugin install askaway@keepglide
+  U->>CC: claude plugin install askaway-user@keepglide
   CC->>PR: busca plugins/askaway no ref e sha fixados
   PR-->>CC: arquivos do plugin
-  CC-->>U: Successfully installed plugin: askaway@keepglide
+  CC-->>U: Successfully installed plugin: askaway-user@keepglide
 ```
 
-Ao adicionar o marketplace, o Claude Code lê o catálogo deste repositório. Cada entrada de plugin declara a origem: `askaway` é uma origem `git-subdir` (a pasta `plugins/askaway` de `KeepGlide/askaway`), e `master-jev-hook` é uma origem `github` (o repositório `KeepGlide/master-jev-hook`). As duas são fixadas num ref do git e num SHA de commit no catálogo. O catálogo em si não tem código para executar: é um único arquivo JSON.
+Ao adicionar o marketplace, o Claude Code lê o catálogo deste repositório. Cada entrada de plugin declara a origem: `askaway-user` é uma origem `git-subdir` (a pasta `plugins/askaway` de `KeepGlide/askaway`), e `askaway-model` é uma origem `github` (o repositório `KeepGlide/master-jev-hook`). As duas são fixadas num ref do git e num SHA de commit no catálogo. O catálogo em si não tem código para executar: é um único arquivo JSON.
 
 ## 📋 Pré-requisitos
 
 - Claude Code, numa plataforma da tabela abaixo.
 - Acesso de rede ao `github.com`: o Claude Code lê o catálogo e busca cada plugin no GitHub.
-- Para o master-jev-hook: o gateway local dele rodando, como descreve o README do plugin.
+- Para o askaway-model: o gateway local dele rodando, como descreve o README do plugin.
 
 | Plataforma | Situação | Observações |
 |---|---|---|
@@ -98,19 +98,19 @@ claude plugin marketplace add KeepGlide/claude-plugins
 ### 2️⃣ Instale um plugin
 
 ```bash
-claude plugin install askaway@keepglide
+claude plugin install askaway-user@keepglide
 ```
 
 Ou num comando só (Claude Code 2.1.292 ou mais novo; `claude plugin install --help` lista a opção `--marketplace`):
 
 ```bash
-claude plugin install askaway --marketplace KeepGlide/claude-plugins
+claude plugin install askaway-user --marketplace KeepGlide/claude-plugins
 ```
 
-Para instalar também o master-jev-hook, rode:
+Para instalar também o askaway-model, rode:
 
 ```bash
-claude plugin install master-jev-hook@keepglide
+claude plugin install askaway-model@keepglide
 ```
 
 Reinicie o Claude Code, ou rode `/reload-plugins` se a sua versão tiver o comando, para carregar o plugin.
@@ -123,18 +123,18 @@ Regras básicas:
 
 - 🔑 Nenhum segredo é necessário. Se um passo pedir um, pare e deixe o usuário digitá-lo.
 - 🧑 precisa de aprovação do usuário: os passos 2, 3 e 3b mudam a configuração do Claude Code.
-- 💸 Nenhum passo de instalação custa dinheiro. O gateway do master-jev-hook faz consultas JEV pagas quando roda (veja o README dele).
+- 💸 Nenhum passo de instalação custa dinheiro. O gateway do askaway-model faz consultas JEV pagas quando roda (veja o README dele).
 - Plataformas: os comandos foram verificados só no Linux.
 
 | # | Passo | Rodar | Expect |
 |---|---|---|---|
 | 1 | Verificar o Claude Code | `claude --version` | Imprime uma versão e `(Claude Code)`; código de saída 0. |
 | 2 | 🧑 Adicionar o marketplace | `claude plugin marketplace add KeepGlide/claude-plugins` | Imprime `Successfully added marketplace: keepglide`; `claude plugin marketplace list` mostra `keepglide`. |
-| 3 | 🧑 Instalar o plugin | `claude plugin install askaway@keepglide` | Imprime `Successfully installed plugin: askaway@keepglide (scope: user)`; `claude plugin list` mostra `askaway@keepglide` com `Version: 1.0.3`. |
-| 3b | 🧑 Instalar o plugin master-jev-hook (opcional) | `claude plugin install master-jev-hook@keepglide` | Imprime `Successfully installed plugin: master-jev-hook@keepglide (scope: user)`; `claude plugin list` mostra `master-jev-hook@keepglide` com `Version: 1.3.0-beta.2`. |
+| 3 | 🧑 Instalar o plugin | `claude plugin install askaway-user@keepglide` | Imprime `Successfully installed plugin: askaway-user@keepglide (scope: user)`; `claude plugin list` mostra `askaway-user@keepglide` com `Version: 1.0.3`. |
+| 3b | 🧑 Instalar o plugin askaway-model (opcional) | `claude plugin install askaway-model@keepglide` | Imprime `Successfully installed plugin: askaway-model@keepglide (scope: user)`; `claude plugin list` mostra `askaway-model@keepglide` com `Version: 1.3.0-beta.2`. |
 | 4 | Devolver ao usuário | nenhum | Informe cada resultado e qualquer passo pulado. |
 
-O plugin master-jev-hook precisa do gateway local rodando (veja o README dele) antes que as ferramentas respondam.
+O plugin askaway-model precisa do gateway local rodando (veja o README dele) antes que as ferramentas respondam.
 
 ✅ **Pronto quando:** os passos 1, 2 e 3 (e o 3b, se escolhido) batem.
 
@@ -149,11 +149,11 @@ claude plugin marketplace update keepglide
 ```
 
 ```bash
-claude plugin update askaway@keepglide
+claude plugin update askaway-user@keepglide
 ```
 
 ```bash
-claude plugin update master-jev-hook@keepglide
+claude plugin update askaway-model@keepglide
 ```
 
 A atualização automática vem desligada por padrão para marketplaces de terceiros. Para ligá-la, rode `/plugin`, abra a aba Marketplaces e ative a atualização automática para `keepglide`.
@@ -161,11 +161,11 @@ A atualização automática vem desligada por padrão para marketplaces de terce
 ## 🧹 Desinstalação
 
 ```bash
-claude plugin uninstall askaway@keepglide
+claude plugin uninstall askaway-user@keepglide
 ```
 
 ```bash
-claude plugin uninstall master-jev-hook@keepglide
+claude plugin uninstall askaway-model@keepglide
 ```
 
 ```bash
@@ -195,7 +195,7 @@ Este repositório não tem configurações próprias. As opções são de cada p
 - O repositório guarda um catálogo JSON, a licença, os READMEs, o changelog (`CHANGELOG.md`), a política de segurança (`SECURITY.md`) e a imagem de capa. Não tem código.
 - O Claude Code contata o `github.com` para ler o catálogo e para buscar cada plugin no ref e SHA fixados.
 - Um plugin executa código na sua máquina com as suas permissões. Leia o repositório de um plugin antes de instalá-lo: o catálogo lista os plugins, mas não garante o código deles.
-- O gateway do master-jev-hook faz consultas JEV pagas quando roda. O README dele descreve as chamadas.
+- O gateway do askaway-model faz consultas JEV pagas quando roda. O README dele descreve as chamadas.
 - Para relatar uma vulnerabilidade neste catálogo, use o canal privado descrito em [SECURITY.md](SECURITY.md). Para relatar uma vulnerabilidade em um plugin, use o repositório desse plugin.
 
 ## 🐞 Problemas conhecidos
@@ -204,7 +204,7 @@ Nenhum problema aberto conhecido em 2026-10-21: `gh issue list -R KeepGlide/clau
 
 Limitações conhecidas:
 
-- O master-jev-hook não faz nada útil até o gateway local rodar. Contorno: inicie o gateway como descreve o README do plugin.
+- O askaway-model não faz nada útil até o gateway local rodar. Contorno: inicie o gateway como descreve o README do plugin.
 - O catálogo não tem número de versão próprio, então o marketplace não pode ser fixado como uma unidade. Contorno: veja a versão de cada plugin com `claude plugin list`.
 
 Encontrou um? [Abra uma issue](https://github.com/KeepGlide/claude-plugins/issues/new).

@@ -1,14 +1,14 @@
 {
   "name": "keepglide",
-  "description": "KeepGlide's Claude Code plugins: Askaway and the ones that follow.",
+  "description": "KeepGlide's Claude Code plugins: AskAway User, AskAway Model and the ones that follow.",
   "owner": {
     "name": "KeepGlide",
     "url": "https://keepglide.com"
   },
   "plugins": [
     {
-      "name": "askaway",
-      "description": "A question inbox for Claude Code: agents file questions with a recommended default while you are away; you answer them in a real panel, one at a time, all at once per project.",
+      "name": "askaway-user",
+      "description": "AskAway User, a question inbox for Claude Code: agents file questions with a recommended default while you are away; you answer them in a real panel, one at a time, all at once per project.",
       "homepage": "https://github.com/KeepGlide/askaway",
       "repository": "https://github.com/KeepGlide/askaway",
       "license": "MIT",
@@ -23,13 +23,13 @@
         "source": "git-subdir",
         "url": "https://github.com/KeepGlide/askaway.git",
         "path": "plugins/askaway",
-        "ref": "v1.0.3",
-        "sha": "27e5f2790610938d65087452e31016bd1b93ce29"
+        "ref": "main",
+        "sha": "da5d7463d349790d74c4927490ec72b18637a064"
       }
     },
     {
-      "name": "master-jev-hook",
-      "description": "JEV decisions for Claude Code: the master-jev-hook MCP tools (request_decision, jev_classify, jev_verify, jev_score, jev_rank), the skill that formulates them, and hooks that check the gateway, remind the rule and gate risky Bash commands. Needs the local gateway from the plugin's README.",
+      "name": "askaway-model",
+      "description": "AskAway Model, JEV decisions for Claude Code: the askaway-model MCP tools (request_decision, jev_classify, jev_verify, jev_score, jev_rank), the skill that formulates them, and hooks that check the gateway, remind the rule and gate risky Bash commands. Needs the local gateway from the plugin's README.",
       "homepage": "https://github.com/KeepGlide/master-jev-hook",
       "repository": "https://github.com/KeepGlide/master-jev-hook",
       "license": "Apache-2.0",
@@ -44,8 +44,8 @@
       "source": {
         "source": "github",
         "repo": "KeepGlide/master-jev-hook",
-        "ref": "v1.3.0-beta.2",
-        "sha": "d877dd2f121029b029e19c84d4d1ca72b755d280"
+        "ref": "main",
+        "sha": "b1318c36ab962b42bea06f0eb67de8e0e6d91fa1"
       }
     }
   ]
